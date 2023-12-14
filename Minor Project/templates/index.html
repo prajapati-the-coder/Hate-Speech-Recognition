@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hate Speech Detection On Twitter Data</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        body{
+            background-color: skyblue;
+        }
+
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        h2{
+            color: darkblue;
+            text-align: center;
+            font-size: x-large;
+            /* font-weight: 10px; */
+        }
+
+        #lyrics{
+            background-color: rgb(191, 183, 226);
+            border: 2px solid rgb(78, 36, 226);
+            border-radius: 10px;
+            width: 900px;
+            height: 200px;
+            margin: 14px 12px;
+            font-size: large;
+            box-shadow: 0px 10px 10px rgb(125, 135, 233);
+        }
+        .btn{
+            background-color: rgb(141, 147, 235);
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: auto;
+        }
+        .btn:hover{
+            color: lightblue;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hate Speech Detection On Twitter Data</h2>
+    <div class="container">
+        <form id="prediction-form" action="/predict" method="post">
+            <label for="lyrics">Write here...</label><br>
+            <textarea id="lyrics" name="lyrics"></textarea><br>
+            <input class="btn" type="submit" value="Predict"><br>
+        </form>
+    </div>
+</body>
+</html>
